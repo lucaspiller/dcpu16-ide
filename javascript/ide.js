@@ -527,6 +527,18 @@ function assemble(data) {
 	$("#assembly").append(str);
 	
 	$("#output").html(listing.bytecodeText());
+
+	var bytecode16 = new Uint16Array(listing.bytecode());
+	var bytecode8 = new Uint8Array(bytecode16.length * 2);
+
+	var i, j = 0;
+	for (i = 0; i < bytecode16.length; ++i) {
+		bytecode8[j++] = bytecode16[i] >>> 8;
+		bytecode8[j++] = bytecode16[i] & 255;
+	}
+
+	var downloadUrl = 'data:application/octet-stream;base64,' + btoa(String.fromCharCode.apply(null, bytecode8));
+	$("#download_button").attr('href', downloadUrl);
 }
 
 function gotoLine(line) {
