@@ -67,7 +67,7 @@ function Monitor(_emulator) {
 	this.blinkGlyphsOn = true;
 	
 	this.bootScreen = new Image();
-    this.bootScreen.src = "/images/boot-screen.png";
+    this.bootScreen.src = "images/boot-screen.png";
 }
 
 Monitor.prototype.init = function() { 

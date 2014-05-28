@@ -18,9 +18,9 @@ function HMD2043(_emulator) {
 	this.context = this.canvas.getContext('2d');
 	
 	this.images = { 
-		"background": Utils.createImage("/images/hmd2043_bg.png"),
-		"media": Utils.createImage("/images/hmd2043_media.png"),
-		"led": Utils.createImage("/images/hmd2043_led.png")
+		"background": Utils.createImage("images/hmd2043_bg.png"),
+		"media": Utils.createImage("images/hmd2043_media.png"),
+		"led": Utils.createImage("images/hmd2043_led.png")
 	};
 	var _this = this;
 	$(this.images["background"]).load(function() { 

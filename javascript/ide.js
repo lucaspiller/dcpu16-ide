@@ -313,7 +313,7 @@ function init() {
 	else if(userData.last == null || !openFile(userData.last)) {
 		// load default file if we couldn't fine one to open
 		$.ajax({
-			url: 			"/programs/diagnostics.asm",
+			url: 			"programs/diagnostics.asm",
 			context:		this,
 			dataType: 		"text",
 			success: 		function(data) { 
